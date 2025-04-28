@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: thread-generator
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn run:app
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.9.12
+      - key: SECRET_KEY
+        generateValue: true
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: TWITTER_URL
+        value: https://twitter.com/devayo
+      - key: TIKTOK_URL
+        value: https://tiktok.com/@devayo
+      - key: GITHUB_URL
+        value: https://github.com/devayopy 

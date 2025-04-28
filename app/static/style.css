@@ -1,0 +1,455 @@
+/* X Thread Generator Custom Styles */
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #222;
+    background: linear-gradient(180deg, #E8F0FE 0%, #FFFFFF 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+/* Main Container */
+.main-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 8rem;
+}
+
+/* Robot Avatar */
+.robot-avatar {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 2rem;
+    background: #FFFFFF;
+    border-radius: 50%;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.robot-avatar img {
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+}
+
+/* Button Styles */
+.btn-primary {
+    background-color: #4285F4;
+    color: white;
+    border: none;
+    padding: 0.8rem 2rem;
+    font-weight: 500;
+    border-radius: 50px;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 6px rgba(66, 133, 244, 0.2);
+    min-width: 200px;
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.btn-primary:hover {
+    background-color: #3367D6;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(66, 133, 244, 0.3);
+}
+
+/* Login Link */
+.login-link {
+    margin-top: 1rem;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.login-link a {
+    color: #4285F4;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+/* Modal Styles */
+.modal-dialog {
+    max-width: 500px;
+}
+
+.modal-dialog-scrollable {
+    max-height: 90vh;
+}
+
+.modal-content {
+    border: none;
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.modal-header {
+    border-bottom: 1px solid #f0f0f0;
+    padding: 1.25rem 1.5rem;
+}
+
+.modal-body {
+    padding: 1.5rem;
+}
+
+.modal-footer {
+    border-top: 1px solid #f0f0f0;
+    padding: 1rem 1.5rem;
+}
+
+.modal-title {
+    font-weight: 600;
+    color: #333;
+    font-size: 1.25rem;
+}
+
+/* Form Styles */
+.form-control {
+    border: 1px solid #E0E0E0;
+    border-radius: 12px;
+    padding: 1rem;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+    background-color: #F8F9FA;
+}
+
+.form-control:focus {
+    border-color: #4285F4;
+    box-shadow: 0 0 0 3px rgba(66, 133, 244, 0.1);
+    background-color: #FFFFFF;
+}
+
+/* Result Card */
+#resultCard {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    margin-top: 2rem;
+    width: 100%;
+    max-width: 600px;
+}
+
+.tweet-card {
+    padding: 1rem;
+    border-bottom: 1px solid #f0f0f0;
+    margin-bottom: 0.5rem;
+}
+
+.tweet-card:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.tweet-card .mb-3 {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #333;
+}
+
+.tweet-card .btn-outline-primary {
+    padding: 0.25rem 1rem;
+    font-size: 0.875rem;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .main-container {
+        padding: 1.5rem 1rem;
+    }
+
+    .robot-avatar {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 1.5rem;
+    }
+
+    .btn-primary {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .modal-dialog {
+        margin: 0.5rem;
+    }
+
+    .app-title {
+        font-size: 1.5rem;
+        margin: 1rem 0;
+    }
+    
+    .modal-body {
+        padding: 1.25rem;
+    }
+    
+    .tweet-card {
+        padding: 0.875rem;
+    }
+
+    .footer {
+        padding: 1rem;
+    }
+
+    .social-icon {
+        font-size: 1.25rem;
+    }
+
+    .social-links {
+        gap: 1.5rem;
+    }
+}
+
+/* Loading Animation */
+.loading-animation {
+    width: 48px;
+    height: 48px;
+    border: 4px solid #E0E0E0;
+    border-top: 4px solid #4285F4;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 2rem auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Hero Section Styles */
+.hero-section {
+    background: linear-gradient(135deg, #4e54c8 0%, #8f94fb 100%);
+    color: white;
+    padding: 3rem 0 0;
+    position: relative;
+    min-height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0;
+    overflow: hidden;
+}
+
+.hero-content {
+    padding: 2rem 1rem 6rem;
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+.wave-divider {
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    line-height: 0;
+    z-index: 1;
+    transform: scale(1.02); /* Slightly wider to prevent edge gaps */
+}
+
+.wave-divider svg {
+    width: 102%; /* Slightly wider to prevent edge gaps */
+    height: auto;
+    display: block;
+    margin-left: -1%; /* Center the wider SVG */
+    filter: drop-shadow(0 -2px 2px rgba(0,0,0,0.05)); /* Subtle shadow for depth */
+}
+
+.badge {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #fff;
+    font-size: 1rem;
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    display: inline-block;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+h1 {
+    font-weight: 800; /* Made slightly bolder */
+    margin-bottom: 1rem;
+    letter-spacing: -0.5px;
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+.lead {
+    text-align: center;
+    font-size: 1.1rem;
+    margin-bottom: 2.5rem;
+    opacity: 0.9;
+}
+
+.lightning {
+    display: inline-block;
+    transform: rotate(10deg);
+}
+
+/* Content Section Styles */
+.content-section {
+    background-color: #fff;
+    flex: 1;
+    padding: 0;
+    position: relative;
+    z-index: 2;
+    margin-top: -1.5rem; /* Adjusted to match wave */
+}
+
+.content-section > .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.content-section h2 {
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+/* Tweet Card Styles */
+.tweet-card {
+    background-color: #ffffff;
+    border: 1px solid #e8e8e8;
+    border-radius: 14px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.tweet-card:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.10);
+}
+
+.tweet-content {
+    white-space: pre-line;
+    font-size: 1.08rem;
+    line-height: 1.7;
+    color: #222;
+}
+
+.tweet-number {
+    font-size: 0.85rem;
+    background-color: #4e54c8;
+    font-weight: 500;
+    border-radius: 8px;
+    padding: 0.3em 0.8em;
+}
+
+/* Footer Styles */
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1.5rem;
+    text-align: center;
+    background: linear-gradient(to top, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.85));
+    backdrop-filter: blur(8px);
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 0.75rem;
+}
+
+.social-icon {
+    color: #4285F4;
+    font-size: 1.5rem;
+    transition: all 0.2s ease;
+    text-decoration: none;
+}
+
+.social-icon:hover {
+    transform: translateY(-2px);
+    color: #3367D6;
+}
+
+.footer-text {
+    color: #666;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-top: 0.5rem;
+}
+
+/* Copy Button Styles */
+.copy-btn {
+    transition: all 0.2s ease;
+    border-radius: 8px;
+    font-weight: 500;
+}
+
+#copyAllBtn {
+    border-color: #4e54c8;
+    color: #4e54c8;
+    border-radius: 50px;
+    font-weight: 500;
+}
+
+#copyAllBtn:hover {
+    background-color: #4e54c8;
+    color: white;
+}
+
+.placeholder-content {
+    font-size: 1.1rem;
+    margin: 2.5rem 0 2rem 0;
+    color: #b0b0b0;
+    letter-spacing: 0.02em;
+    min-height: 2.5rem;
+}
+
+.blinking-dots span {
+    animation: blink 1.4s infinite both;
+    opacity: 0.5;
+    font-size: 1.3em;
+    margin-left: 0.1em;
+}
+.blinking-dots span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+.blinking-dots span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes blink {
+    0%, 80%, 100% { opacity: 0.2; }
+    40% { opacity: 1; }
+}
+
+.app-title {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: #333;
+    margin: 1.5rem 0;
+    text-align: center;
+} 
